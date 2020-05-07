@@ -2,7 +2,7 @@
     "family": "",
     "taskRoleArn": "",
     "executionRoleArn": "",
-    "networkMode": "bridge",
+    "networkMode": "none",
     "containerDefinitions": [
         {
             "name": "",
@@ -20,7 +20,7 @@
                 {
                     "containerPort": 0,
                     "hostPort": 0,
-                    "protocol": "udp"
+                    "protocol": "tcp"
                 }
             ],
             "essential": true,
@@ -63,7 +63,7 @@
                         "hostPath": "",
                         "containerPath": "",
                         "permissions": [
-                            "write"
+                            "mknod"
                         ]
                     }
                 ],
@@ -90,7 +90,7 @@
             "dependsOn": [
                 {
                     "containerName": "",
-                    "condition": "COMPLETE"
+                    "condition": "SUCCESS"
                 }
             ],
             "startTimeout": 0,
@@ -123,13 +123,13 @@
             },
             "ulimits": [
                 {
-                    "name": "nofile",
+                    "name": "rss",
                     "softLimit": 0,
                     "hardLimit": 0
                 }
             ],
             "logConfiguration": {
-                "logDriver": "awsfirelens",
+                "logDriver": "syslog",
                 "options": {
                     "KeyName": ""
                 },
@@ -158,7 +158,7 @@
             "resourceRequirements": [
                 {
                     "value": "",
-                    "type": "InferenceAccelerator"
+                    "type": "GPU"
                 }
             ],
             "firelensConfiguration": {
@@ -193,7 +193,7 @@
                 "transitEncryptionPort": 0,
                 "authorizationConfig": {
                     "accessPointId": "",
-                    "iam": "DISABLED"
+                    "iam": "ENABLED"
                 }
             }
         }
@@ -216,7 +216,7 @@
         }
     ],
     "pidMode": "task",
-    "ipcMode": "task",
+    "ipcMode": "none",
     "proxyConfiguration": {
         "type": "APPMESH",
         "containerName": "",
