@@ -6,7 +6,7 @@
     "containerDefinitions": [
         {
             "name": "sample-app",
-            "image": "",
+            "image": "857255355631.dkr.ecr.eu-central-1.amazonaws.com/github-test:latest",
             "repositoryCredentials": {
                 "credentialsParameter": ""
             },
