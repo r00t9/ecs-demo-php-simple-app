@@ -1,11 +1,11 @@
 {
     "requiresCompatibilities": [
-        "EC2"
+        "FARGATE"
     ],
     "inferenceAccelerators": [],
     "containerDefinitions": [
         {
-            "name": "sample-app",
+            "name": "test",
             "image": "",
             "memory": "256",
             "resourceRequirements": null,
@@ -40,5 +40,5 @@
     "memory": null,
     "cpu": null,
     "placementConstraints": [],
-    "family": "demo-node-task-definition"
+    "family": "first-run-task-definition"
 }
