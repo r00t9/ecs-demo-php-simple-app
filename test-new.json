@@ -37,8 +37,8 @@
     ],
     "volumes": [],
     "networkMode": "awsvpc",
-    "memory": null,
-    "cpu": null,
+    "memory": "512",
+    "cpu": "256",
     "placementConstraints": [],
     "family": "first-run-task-definition"
 }
