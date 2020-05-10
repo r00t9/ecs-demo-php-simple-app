@@ -26,6 +26,8 @@
 on:
   push:
     branches: [ master ]
+  release:
+    types: [created]
     
 name: Deploy to Amazon ECS
 
