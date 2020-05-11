@@ -41,5 +41,5 @@
     "cpu": "256",
     "placementConstraints": [],
     "family": "first-run-task-definition",
-    "taskRoleArn": "arn:aws:iam::883008734540:role/ecsTaskExecutionRole"
+    "executionRoleArn": "arn:aws:iam::883008734540:role/ecsTaskExecutionRole"
 }
