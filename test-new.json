@@ -40,5 +40,6 @@
     "memory": "512",
     "cpu": "256",
     "placementConstraints": [],
-    "family": "first-run-task-definition"
+    "family": "first-run-task-definition",
+    "taskDefinitionArn": "arn:aws:ecs:ap-northeast-1:883008734540:task-definition/first-run-task-definition:2"
 }
